@@ -1,5 +1,6 @@
 package Model.Types;
 
+import Model.Values.BoolValue;
 import Model.Values.Values;
 
 public class Bool implements Types {
@@ -11,6 +12,11 @@ public class Bool implements Types {
 
     @Override
     public Values getDefault() {
-        return null;
+        return new BoolValue(false);
+    }
+
+    @Override
+    public String toString() {
+        return "Bool";
     }
 }
