@@ -1,5 +1,7 @@
 package Model.ADT;
 
+import Exceptions.MyException;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -28,9 +30,9 @@ public class MyDictionary<K, V> implements IDictionary<K, V>{
     }
 
     @Override
-    public void remove(K key) throws Exception {
+    public void remove(K key) throws MyException {
         if (!this.dictionary.containsKey(key))
-            throw new Exception("ERROR: Dictionary does not contain key.");
+            throw new MyException("ERROR: Dictionary does not contain key.");
         this.dictionary.remove(key);
     }
 
@@ -56,7 +58,7 @@ public class MyDictionary<K, V> implements IDictionary<K, V>{
 
     @Override
     public MyDictionary<K, V> cloneDict() {
-        MyDictionary<K, V> newDict = new MyDictionary<K, V>();
+        MyDictionary<K, V> newDict = new MyDictionary<>();
         for (K key : this.keys()) {
             newDict.put(key, this.dictionary.get(key));
         }

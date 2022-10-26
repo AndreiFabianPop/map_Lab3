@@ -1,5 +1,7 @@
 package Model.ADT;
 
+import Exceptions.MyException;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -22,15 +24,15 @@ public class MyList<T> implements IList<T>{
     }
 
     @Override
-    public void remove(T val) throws Exception {
+    public void remove(T val) throws MyException {
         if (!this.list.remove(val))
-            throw new Exception("ERROR: No such element in list.");
+            throw new MyException("ERROR: No such element in list.");
     }
 
     @Override
-    public void remove(int index) throws Exception {
+    public void remove(int index) throws MyException {
         if (index < 0 || index >= this.list.size())
-            throw new Exception("ERROR: No such element in list.");
+            throw new MyException("ERROR: No such element in list.");
         this.list.remove(index);
     }
 

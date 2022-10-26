@@ -1,5 +1,7 @@
 package Model.ADT;
 
+import Exceptions.MyException;
+
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.function.Consumer;
@@ -21,16 +23,16 @@ public class MyStack<T> implements IStack<T>{
     }
 
     @Override
-    public T pop() throws Exception {
+    public T pop() throws MyException {
         if (this.stack.isEmpty())
-            throw new Exception("ERROR: Stack is empty.");
+            throw new MyException("ERROR: Stack is empty.");
         return this.stack.pop();
     }
 
     @Override
-    public T top() throws Exception {
+    public T top() throws MyException {
         if (this.stack.isEmpty())
-            throw new Exception("ERROR: Stack is empty.");
+            throw new MyException("ERROR: Stack is empty.");
         return this.stack.peek();
     }
 

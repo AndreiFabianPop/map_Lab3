@@ -1,13 +1,15 @@
 package Model.ADT;
 
+import Exceptions.MyException;
+
 import java.util.List;
 
 public interface IList<T> extends Iterable<T> {
     void add(T val);
 
-    void remove(T val) throws Exception; // TODO ex
+    void remove(T val) throws MyException;
 
-    void remove(int index) throws Exception;
+    void remove(int index) throws MyException;
 
     T get(int index);
 

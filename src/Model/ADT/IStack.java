@@ -1,13 +1,15 @@
 package Model.ADT;
 
+import Exceptions.MyException;
+
 import java.util.Stack;
 
 public interface IStack<T> extends Iterable<T> {
     void push(T val);
 
-    T pop() throws Exception;
+    T pop() throws MyException;
 
-    T top() throws Exception;
+    T top() throws MyException;
 
     boolean isEmpty();
 
