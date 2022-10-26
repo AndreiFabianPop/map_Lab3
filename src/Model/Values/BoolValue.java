@@ -1,7 +1,7 @@
 package Model.Values;
 
-import Model.Types.Bool;
-import Model.Types.Types;
+import Model.Types.BoolType;
+import Model.Types.Type;
 
 public class BoolValue implements Values{
     private boolean value;
@@ -24,8 +24,8 @@ public class BoolValue implements Values{
     }
 
     @Override
-    public Types getType() {
-        return new Bool();
+    public Type getType() {
+        return new BoolType();
     }
 
     @Override

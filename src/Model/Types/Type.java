@@ -2,8 +2,8 @@ package Model.Types;
 
 import Model.Values.Values;
 
-public interface Types {
-    boolean equals(Types other);
+public interface Type {
+    boolean equals(Type other);
     Values getDefault();
     String toString();
 }

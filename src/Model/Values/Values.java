@@ -1,7 +1,7 @@
 package Model.Values;
 
-import Model.Types.Types;
+import Model.Types.Type;
 
 public interface Values {
-    Types getType();
+    Type getType();
 }

@@ -3,11 +3,11 @@ package Model.Types;
 import Model.Values.BoolValue;
 import Model.Values.Values;
 
-public class Bool implements Types {
+public class BoolType implements Type {
 
     @Override
-    public boolean equals(Types other) {
-        return other instanceof Bool;
+    public boolean equals(Type other) {
+        return other instanceof BoolType;
     }
 
     @Override

@@ -1,7 +1,7 @@
 package Model.Values;
 
 import Model.Types.IntType;
-import Model.Types.Types;
+import Model.Types.Type;
 
 public class IntValue implements Values {
     private int value;
@@ -19,7 +19,7 @@ public class IntValue implements Values {
     }
 
     @Override
-    public Types getType() {
+    public Type getType() {
         return new IntType();
     }
 
