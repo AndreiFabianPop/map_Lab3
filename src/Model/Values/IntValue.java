@@ -30,6 +30,9 @@ public class IntValue implements Values {
 
     @Override
     public boolean equals(Object obj) {
-
+        if (!(obj instanceof IntValue)) {
+            return false;
+        }
+        return this.value == ((IntValue) obj).value;
     }
 }
