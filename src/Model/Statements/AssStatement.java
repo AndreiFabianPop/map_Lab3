@@ -3,7 +3,7 @@ package Model.Statements;
 import Exceptions.MyException;
 import Model.ProgramState;
 
-public class AssStatement implements IStatement{
+public class AssStatement implements IStatement{ // assign :)
     private final String key;
 
     public AssStatement() {
