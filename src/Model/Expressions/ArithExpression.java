@@ -29,7 +29,7 @@ public class ArithExpression extends BinaryExpression {
         switch (operator) {
             case ADD -> { return new IntValue(leftValue.getValue() + rightValue.getValue()); }
             case SUBSTR -> { return new IntValue(leftValue.getValue() - rightValue.getValue()); }
-            case MORE -> { return new IntValue(leftValue.getValue() * rightValue.getValue()); }
+            case MULT -> { return new IntValue(leftValue.getValue() * rightValue.getValue()); }
             case DIV -> {
                 if (rightValue.getValue() == 0) {
                     throw new MyException("ERROR: Division by 0 is forbidden");
