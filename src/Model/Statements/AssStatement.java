@@ -33,6 +33,6 @@ public class AssStatement implements IStatement{ // assign :)
 
     @Override
     public String toString() {
-        return String.format("Assignment{%s = %s}", key, expression);
+        return String.format("Assignment{%s = %s}", key, expression.toString());
     }
 }

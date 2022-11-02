@@ -75,7 +75,7 @@ public class ProgramState {
 
     @Override
     public String toString() {
-        return String.format("Execution stack:\n%s\nSymbol Table:\n%s\nOut:\n%s\n",
+        return String.format("Execution stack:\n%s\nSymbol Table:\n%s\nOut:\n%s",
                 execToString(),
                 symToString(),
                 outToString());
